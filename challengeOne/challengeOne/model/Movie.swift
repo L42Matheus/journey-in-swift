@@ -5,9 +5,10 @@
 //  Created by cit on 17/05/22.
 //
 
-import Foundation
+import Foundation 
+import SwiftUI
 
-struct Movie{
+class Movie{
     
     var id: Int
     var voteAverage: Double
@@ -20,7 +21,7 @@ struct Movie{
     var realeseDate: String
     var genres: [Genre]
     
-    
+ 
     init(id: Int, voteAverage: Double, title: String, originalTitle: String,
          popularity: Double, postePath: String, backdropPath: String, overview: String,
          realeseDate: String, genres: [Genre]){
@@ -37,4 +38,8 @@ struct Movie{
         self.genres = genres
         
     }
+    
+
+
+    
 }

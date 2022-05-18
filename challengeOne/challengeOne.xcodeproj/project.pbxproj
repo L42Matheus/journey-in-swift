@@ -15,6 +15,8 @@
 		4F3BF9D32833FFDB00ABE376 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F3BF9D22833FFDB00ABE376 /* Assets.xcassets */; };
 		4F3BF9D62833FFDB00ABE376 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F3BF9D42833FFDB00ABE376 /* LaunchScreen.storyboard */; };
 		4F3BF9DE2834046E00ABE376 /* SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F3BF9DD2834046E00ABE376 /* SwiftUIView.swift */; };
+		4F3BF9E02834092200ABE376 /* Genre.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F3BF9DF2834092200ABE376 /* Genre.swift */; };
+		4F3BF9E328340A2000ABE376 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F3BF9E228340A2000ABE376 /* Movie.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +29,8 @@
 		4F3BF9D52833FFDB00ABE376 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4F3BF9D72833FFDB00ABE376 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4F3BF9DD2834046E00ABE376 /* SwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIView.swift; sourceTree = "<group>"; };
+		4F3BF9DF2834092200ABE376 /* Genre.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Genre.swift; sourceTree = "<group>"; };
+		4F3BF9E228340A2000ABE376 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		97FB6A952EFC47125DCBE640 /* Pods-challengeOne.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-challengeOne.release.xcconfig"; path = "Target Support Files/Pods-challengeOne/Pods-challengeOne.release.xcconfig"; sourceTree = "<group>"; };
 		99DE57C840BCC1D91AB56918 /* Pods-challengeOne.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-challengeOne.debug.xcconfig"; path = "Target Support Files/Pods-challengeOne/Pods-challengeOne.debug.xcconfig"; sourceTree = "<group>"; };
 		ED2D4A15EF547F20DBC8EDB1 /* Pods_challengeOne.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_challengeOne.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -44,6 +48,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4F0182BC283469D700F6BE5F /* service */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = service;
+			sourceTree = "<group>";
+		};
 		4F3BF9BD2833FFD700ABE376 = {
 			isa = PBXGroup;
 			children = (
@@ -65,9 +76,10 @@
 		4F3BF9C82833FFD700ABE376 /* challengeOne */ = {
 			isa = PBXGroup;
 			children = (
-				4F3BF9C92833FFD700ABE376 /* AppDelegate.swift */,
-				4F3BF9CB2833FFD700ABE376 /* SceneDelegate.swift */,
-				4F3BF9CD2833FFD700ABE376 /* ViewController.swift */,
+				4F0182BC283469D700F6BE5F /* service */,
+				4F3BF9E528340CF700ABE376 /* delegate */,
+				4F3BF9E1283409F400ABE376 /* model */,
+				4F3BF9E428340CCF00ABE376 /* controller */,
 				4F3BF9DD2834046E00ABE376 /* SwiftUIView.swift */,
 				4F3BF9CF2833FFD700ABE376 /* Main.storyboard */,
 				4F3BF9D22833FFDB00ABE376 /* Assets.xcassets */,
@@ -75,6 +87,32 @@
 				4F3BF9D72833FFDB00ABE376 /* Info.plist */,
 			);
 			path = challengeOne;
+			sourceTree = "<group>";
+		};
+		4F3BF9E1283409F400ABE376 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				4F3BF9DF2834092200ABE376 /* Genre.swift */,
+				4F3BF9E228340A2000ABE376 /* Movie.swift */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		4F3BF9E428340CCF00ABE376 /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				4F3BF9CD2833FFD700ABE376 /* ViewController.swift */,
+			);
+			path = controller;
+			sourceTree = "<group>";
+		};
+		4F3BF9E528340CF700ABE376 /* delegate */ = {
+			isa = PBXGroup;
+			children = (
+				4F3BF9C92833FFD700ABE376 /* AppDelegate.swift */,
+				4F3BF9CB2833FFD700ABE376 /* SceneDelegate.swift */,
+			);
+			path = delegate;
 			sourceTree = "<group>";
 		};
 		9858009EDC372DE857F35609 /* Frameworks */ = {
@@ -211,8 +249,10 @@
 			files = (
 				4F3BF9CE2833FFD700ABE376 /* ViewController.swift in Sources */,
 				4F3BF9CA2833FFD700ABE376 /* AppDelegate.swift in Sources */,
+				4F3BF9E328340A2000ABE376 /* Movie.swift in Sources */,
 				4F3BF9DE2834046E00ABE376 /* SwiftUIView.swift in Sources */,
 				4F3BF9CC2833FFD700ABE376 /* SceneDelegate.swift in Sources */,
+				4F3BF9E02834092200ABE376 /* Genre.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
